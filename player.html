@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Azscore - Today Live Scores, Today Football Live Scores, Live Score today</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/material-icons.css">
+    <link href="css/bootstrap/bootstrap-datepicker3.standalone.min.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<header class="container-fluid navbar d-block p-0">
+    <nav class="row flex-nowrap">
+        <div class="d-flex align-items-center justify-content-start col-lg-3 col-md-12 col-12 row">
+            <a href="#" class="col-md-auto col-auto button-collapse d-md-flex d-lg-none"  data-toggle="modal" data-target=".modal"><i class="icon icon-navicon"></i></a>
+            <a class="col-lg-6 col-md-6 col-auto" href="/" >
+                <img src="img/logo.png" alt="brand-logo"/>
+            </a>
+            <div class="col-lg-6 col-md-6 social d-none d-lg-flex justify-content-end">
+                <a href="https://www.facebook.com/wwwazscorecom/" title="facebook" target="_blank">
+                    <i class="icon icon-facebook"></i>
+                </a>
+                <a href="https://twitter.com/azscorecom" title="twitter" target="_blank">
+                    <i class="icon icon-twitter"></i>
+                </a>
+                <a href="https://plus.google.com/113235603522288693165" title="google" target="_blank">
+                    <i class="icon icon-google-plus"></i>
+                </a>
+                <a href="https://www.instagram.com/azscore/" title="instagram" target="_blank">
+                    <i class="icon icon-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <form class="form-inline my-2 my-lg-0 col-lg-5 d-none d-lg-flex">
+            <input
+                    class="form-control mr-sm-1 px-2"
+                    type="search"
+                    placeholder="Search score..."
+                    aria-label="Search"
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Search score...'"
+            >
+            <button type="submit" class="btn"><i class="icon icon-search d-flex"></i></button>
+        </form>
+
+        <a href="./components/settings.html" title=""
+           class="d-none d-lg-flex align-items-center justify-content-center col-lg time px-2">
+            <time class="show-time"></time>
+            <span class="timezone pt-2"></span>
+        </a>
+        <div class="d-flex align-items-center justify-content-md-between justify-content-end links col-lg col-md col-sm">
+            <div class="dropdown d-none d-lg-block">
+                <a class="d-flex align-items-center px-2" href="#!">
+                    EN
+                    <i class="icon icon-caret-down pl-1"></i>
+                </a>
+                <div class="flex-column menu" style="display:none">
+                    <a class="d-flex align-items-center" href="#!">
+                        <img src="./img/en.png" alt="English" title="English">
+                        English
+                    </a>
+                    <a class="d-flex align-items-center" href="#!">
+                        <img src="./img/ru.png" alt="Russian" title="Russian">
+                        Русский
+                    </a>
+                    <a class="d-flex align-items-center" href="#!">
+                        <img src="./img/az.png" alt="Azərbaycanca" title="Azərbaycanca">
+                        Azərbaycanca
+                    </a>
+                    <a class="d-flex align-items-center" href="#!">
+                        <img src="./img/tr.png" alt="Türkçe" title="Türkçe">
+                        Türkçe
+                    </a>
+                </div>
+            </div>
+            <a href="/ua/my-games" title="" class="d-none d-lg-block px-2">
+                <i class="icon icon-notifications"></i>
+            </a>
+            <a href="./components/settings.html" title="" class="d-none d-lg-block px-2">
+                <i class="icon icon-config"></i>
+            </a>
+        </div>
+    </nav>
+
+    <div class="modal fade" tabindex="-1" role="dialog"  aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div id="slide-out" class="side-nav live_menu modal-dialog">
+            <div class="menu_head row">
+                <div class="col-6">
+                    <a href="#">
+                        <img src="img/logo.png" alt="" title="">
+                    </a>
+                </div>
+                <div class="col-6">
+                    <span>15:44 (<a href="#" title="">GMT  +3</a>)</span>
+                    <div class="mob_lang">
+                        <a href="#" title="">En</a>
+                        <a href="#" title="">Ru</a>
+                        <a href="#" title="">Az</a>
+                        <a href="#" title="">Tr</a>
+                    </div>
+                </div>
+            </div>
+            <a href="" title="Live"><i class="icon icon-live-scores"></i> Live Scores</a>
+            <a href="" title="Today"><i class="icon icon-today-scores"></i> Today Scores</a>
+            <a href="" title="Yesterday"><i class="icon icon-yesterday-scores"></i> Yesterday Scores</a>
+            <a href="" title="Not Started"><i class="icon icon-not-started-scores"></i> Not Started Scores</a>
+            <a href="" title="Finished"><i class="icon icon-finished-scores"></i> Finished Scores</a>
+            <a href="" title="Tomorrow"><i class="icon icon-tomorrow-scores"></i> Tomorrow Scores</a>
+            <a href="" title="Calendar"><i class="icon icon-live-scores-calendar"></i> Calendar</a>
+            <a href="#" title="Predictions"><i class="icon icon-predictions"></i> Predictions</a>
+            <a href="#" title="Odds"><i class="icon icon-predictions"></i> Odds</a>
+            <a href="#" title="Soccer Database"><i class="icon icon-soccer-database"></i> Soccer Database</a>
+            <a href="#" title="Tables"><i class="icon icon-football-tables"></i> Football Tables</a>
+            <a href="#" title="Leagues"><i class="icon icon-leagues"></i> Leagues</a>
+            <a href="#" title="Football News"><i class="icon icon-football-news"></i> Football News</a>
+            <a href="#" title="My Games"><i class="icon icon-star"></i> My Games</a>
+            <a href="#" title="Contact us"><i class="icon icon-give-us-feedbacks"></i> Contact us</a>
+
+        </div>
+    </div>
+</header>
+
+
+<main class="container-fluid px-0 mx-auto">
+    <div class="row m-0 flex-nowrap">
+        <div class="col-lg-2 d-none d-lg-block pt-4 px-0">
+            <ul class="col-lg nav flex-column mb-2 px-1">
+                <li class="d-flex align-items-center justify-content-between nav-header mb-2">
+                    <h5 class="m-0">Leagues</h5>
+                    <span>Show all</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="flags"></span>
+                        <span>UEFA Champions League</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="flags"></span>
+                        <span>UEFA Champions League</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="flags"></span>
+                        <span>UEFA Champions League</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="flags"></span>
+                        <span>UEFA Champions League</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="flags"></span>
+                        <span>UEFA Champions League</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="flags"></span>
+                        <span>UEFA Champions League</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="flags"></span>
+                        <span>UEFA Champions League</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="flags"></span>
+                        <span>UEFA Champions League</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="flags"></span>
+                        <span>UEFA Champions League</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="flags"></span>
+                        <span>UEFA Champions League</span>
+                    </a>
+                </li>
+            </ul>
+            <a href="#" class="d-flex align-items-center justify-content-center more"><i
+                    class="icon icon-caret-down"></i></a>
+            <div class="col-lg p-0 mb-2" id="sandbox-container">
+                <div class="col-lg p-0 mb-2"></div>
+            </div>
+            <a href="http://refpa.top/L?tag=d_77895m_2804c_link_2&site=77895&ad=2804" style="width: 100%;">
+                <img src="./img/Media3953__250x250_Bonus_ENG.gif" alt="banner" style="width: 100%;">
+            </a>
+        </div>
+        <div class="col-lg main-wrapper pt-lg-4">
+            <div class="container-fluid">
+                <div class="row">
+                    <nav class="d-none d-lg-block py-2 col-lg">
+                        <ul class="d-flex flex-row justify-content-around navbar-nav px-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Live</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Today</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Yesterday</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Not Started</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Finished</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Tomorrow</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Calendar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Predictions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Odds</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Soccer Database</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Tables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Leagues</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">My Games</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="row mt-2">
+                    <a href="http://refpa.top/L?tag=d_77895m_2804c_link_2&site=77895&ad=2804" style="width: 100%;">
+                        <img src="./img/Media3415__750x100_bonus_EN.gif" alt="banner" style="width: 100%;">
+                    </a>
+                </div>
+
+                <div class="row d-lg-none d-flex">
+                    <div class="align-items-center title col-12 p-0">
+                        <h4 class=" p-0 pl-2 m-0 py-1">Keylor Navas - Real Madrid</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg p-0 teams_games">
+                        <div class="d-lg-flex align-items-center title">
+                            <h4 class="col-lg p-0 pl-2 m-0 py-1">Keylor Navas - Real Madrid</h4>
+                        </div>
+                        <div class="games mt-lg-3 mr-lg-3 p-2">
+
+                            <div class="row player_info">
+                                <div class="col-sm-12 col-md-2 col-lg-2 ">
+                                    <img src="./img/34586.jpg" alt="Keylor Navas" title="Keylor Navas" class="player_photo">
+                                </div>
+                                <div class="col-sm-12 col-md-10 col-lg-10">
+                                    <div class="about_player row">
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                            <span>Player Name:</span>
+                                        </div>
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                            <strong>Keylor Navas</strong>
+                                        </div>
+                                    </div>
+                                    <div class="about_player row">
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                            <span>Player Position:</span>
+                                        </div>
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                            <strong>goalkeeper</strong>
+                                        </div>
+                                    </div>
+                                    <div class="about_player row">
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                            <span>Player Number:</span>
+                                        </div>
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                            <strong>1</strong>
+                                        </div>
+                                    </div>
+                                    <div class="about_player row">
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                            <span>Player Country:</span>
+                                        </div>
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                            <strong>Costa Rica</strong>
+                                        </div>
+                                    </div>
+                                    <div class="about_player row">
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                            <span>Player Height:</span>
+                                        </div>
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                            <strong>185</strong>
+                                        </div>
+                                    </div>
+                                    <div class="about_player row">
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                            <span>Player birthday:</span>
+                                        </div>
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                            <strong>15-12-1986</strong>
+                                        </div>
+                                    </div>
+                                    <div class="about_player row">
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                            <span>Player Foot:</span>
+                                        </div>
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                            <strong>right</strong>
+                                        </div>
+                                    </div>
+                                    <div class="about_player row">
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                            <span>Estimated value:</span>
+                                        </div>
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                            <strong>£17.00m</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+
+                    </div>
+                    <div class="col-lg-4 p-0 teams_players">
+                        <div class="rside">
+                            <h3 class="mt-2 d-lg-block d-none">TEAM INFO</h3>
+                            <div class="foot-news px-3 py-4 mt-3">
+
+                                <div class="row">
+                                    <div class="team_imgName col-sm-3 col-md-3 col-lg-12 ">
+                                        <img src="./img/22462.png" alt="Real Madrid" title="Real Madrid">
+                                        <h2>Real Madrid</h2>
+                                    </div>
+                                    <div class="rb_aboutTeam col-sm-9 col-md-9 col-lg-12 ">
+                                        <div class="row">
+                                            <div class="col-6 col-sm-6 col-md-6 col-lg-6">City:</div>
+                                            <div class="col-6 col-sm-6 col-md-6 col-lg-6">Madrid</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 col-sm-6 col-md-6 col-lg-6">Stadium:</div>
+                                            <div class="col-6 col-sm-6 col-md-6 col-lg-6">Santiago Bernabéu</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 col-sm-6 col-md-6 col-lg-6">Capacity:</div>
+                                            <div class="col-6 col-sm-6 col-md-6 col-lg-6">54907</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 col-sm-7 col-md-6 col-lg-6">Established Date:</div>
+                                            <div class="col-6 col-sm-5 col-md-6 col-lg-6">1902</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 col-sm-6 col-md-6 col-lg-6">Official Site:</div>
+                                            <div class="col-6 col-sm-6 col-md-6 col-lg-6">www.realmadrid.com</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 col-sm-6 col-md-6 col-lg-6">Coach:</div>
+                                            <div class="col-6 col-sm-6 col-md-6 col-lg-6">Zinedine Zidane</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="players_list">
+                                    <h3>Players</h3>
+                                    <a href="#" title="Keylor Navas" class="row players_list_block">
+                                        <div class="col-3 col-sm-3 col-md-2 col-lg-2">
+                                            <img src="./img/34585.jpg" alt="Keylor Navas" title="Keylor Navas">
+                                            <span class="grey-text">1</span>
+                                        </div>
+                                        <div class="col-5 col-sm-5 col-md-5 col-lg-5">
+                                            <h6>Keylor Navas</h6>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-5 col-lg-5">
+                                            <span>Goalkeeper</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" title="Kiko Casilla" class="row players_list_block">
+                                        <div class="col-3 col-sm-3 col-md-2 col-lg-2">
+                                            <img src="./img/34585.jpg" alt="Kiko Casilla" title="Kiko Casilla">
+                                            <span class="grey-text">13</span>
+                                        </div>
+                                        <div class="col-5 col-sm-5 col-md-5 col-lg-5">
+                                            <h6>Kiko Casilla</h6>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-5 col-lg-5">
+                                            <span>Goalkeeper</span>
+                                        </div>
+                                    </a>
+                                </div>
+
+
+                                <div class="news mb-2 d-none d-lg-block">
+                                    <a class="d-block my-3" href="/ua/news" title="">FOOTBALL NEWS</a>
+                                    <div class="news-item my-2">
+                                        <a class="col-lg d-flex pl-0"
+                                           href="/ua/news-view/91149/arsenal-vs-vorskla-tv-cannel-live-stream-squad-news-amp-preview"
+                                           title="Arsenal vs Vorskla">
+                                            <img class="col-lg-5 p-0" src="./img/img5ba355dc37ddd.jpg" alt="">
+                                            <div class="col-lg px-3 py-2">
+                                                <h5 title="Arsenal vs Vorskla TV channel">Arsenal vs Vorskla TV
+                                                    channel</h5>
+                                                <p>Arsenal vs Vorskla TV channel ...</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="news-item my-2">
+                                        <a class="col-lg d-flex pl-0"
+                                           href="/ua/news-view/91149/arsenal-vs-vorskla-tv-cannel-live-stream-squad-news-amp-preview"
+                                           title="Arsenal vs Vorskla">
+                                            <img class="col-lg-5 p-0" src="./img/img5ba355dc37ddd.jpg" alt="">
+                                            <div class="col-lg px-3 py-2">
+                                                <h5 title="Arsenal vs Vorskla TV channel">Arsenal vs Vorskla TV
+                                                    channel</h5>
+                                                <p>Arsenal vs Vorskla TV channel ...</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="news-item my-2">
+                                        <a class="col-lg d-flex pl-0"
+                                           href="/ua/news-view/91149/arsenal-vs-vorskla-tv-cannel-live-stream-squad-news-amp-preview"
+                                           title="Arsenal vs Vorskla">
+                                            <img class="col-lg-5 p-0" src="./img/img5ba355dc37ddd.jpg" alt="">
+                                            <div class="col-lg px-3 py-2">
+                                                <h5 title="Arsenal vs Vorskla TV channel">Arsenal vs Vorskla TV
+                                                    channel</h5>
+                                                <p>Arsenal vs Vorskla TV channel ...</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <a href="/ua/news/" class="btn btn-success all-news d-block mx-auto py-2">ALL
+                                        NEWS</a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="d-none d-lg-block desktop">
+    <div class="container-fluid mx-auto">
+        <div class="row footer-info py-4">
+            <div class="col-lg-4">
+                <h5 class="px-2 mb-3">About</h5>
+                <p>Since 2007, we presented the results of football matches. Users of the platform can watch not only
+                    today's, yesterday's or live games’ scores, but also can get predictions for future games.</p>
+                <p>The system is very easy to use and can be implemented in the mobile and the web platform.</p>
+                <p>As Azscore team, we are working on the site’s innovations. So we’ll be happy to receive any
+                    suggestions and comments from you by mailing us (office@azscore.com).</p>
+                <p>Difference from alternatives, Azscore always present superior functions.</p>
+                <p>So stay with us, it will be more interesting day after day!</p>
+            </div>
+            <div class="col-lg">
+                <h5 class="px-2 mb-3">Games</h5>
+                <ul>
+                    <li>
+                        <a href="">Live</a>
+                    </li>
+                    <li>
+                        <a href="">Not Started</a>
+                    </li>
+                    <li>
+                        <a href="">Today</a>
+                    </li>
+                    <li>
+                        <a href="">Yesterday</a>
+                    </li>
+                    <li>
+                        <a href="">Tomorrow</a>
+                    </li>
+                    <li>
+                        <a href="http://millinet.az/site.php?id=331">
+                            <img src="img/millinet.png" alt="millinet">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg">
+                <h5 class="px-2 mb-3">Leagues</h5>
+                <ul>
+                    <li>
+                        <a href="">English Premier</a>
+                    </li>
+                    <li>
+                        <a href="">Italian A</a>
+                    </li>
+                    <li>
+                        <a href="">Spanish Premier</a>
+                    </li>
+                    <li>
+                        <a href="">German Bundesliga</a>
+                    </li>
+                    <li>
+                        <a href="">See all leagues</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg">
+                <h5 class="px-2 mb-3">Tables</h5>
+                <ul>
+                    <li>
+                        <a href="">England</a>
+                    </li>
+                    <li>
+                        <a href="">Italy</a>
+                    </li>
+                    <li>
+                        <a href="">Spain</a>
+                    </li>
+                    <li>
+                        <a href="">Germany</a>
+                    </li>
+                    <li>
+                        <a href="">See All Tables</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid footer-bottom">
+        <div class="row d-flex justify-content-between copyright mx-auto px-1 py-3">
+            <span>2001-2018 © <a href="/" title="">azscore.com</a></span>
+            <span>All Rights Reserved</span>
+        </div>
+    </div>
+    <a href="" class="d-none d-lg-flex justify-content-center align-items-center to-top"><i
+            class="icon icon-scrollup-icon"></i></a>
+</footer>
+<footer class="d-flex justify-content-around d-lg-none mobile">
+    <a href="">
+        <img src="./img/all_games.png" alt="">
+        <span class="text">Today</span>
+    </a>
+    <a href="">
+        <img src="./img/live_games.png" alt="">
+        <span class="text">Live</span>
+    </a>
+    <a href="">
+        <img src="./img/my_games_hover.png" alt="">
+        <span class="text">My Games</span>
+    </a>
+    <a href="">
+        <img src="./img/standings.png" alt="">
+        <span class="text">Tables</span>
+    </a>
+</footer>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/datepicker_lang/bootstrap-datepicker.en.min.js"></script>
+</html>

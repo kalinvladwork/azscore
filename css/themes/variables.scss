@@ -1,0 +1,46 @@
+$maxWidth: 1280px;
+$font-size-base: 16;
+
+// colors
+$bodyBgColor: #f6f6f6;
+$color-dark-3: #2c3e50;
+$color-white: #fff;
+$color-green-1: #28b463;
+$transition: .3s;
+$color-grey-1: #405366;
+$color-dark-1: #290011;
+$color-dark-2: #2C3E50;
+$color-grey-2: #eee;
+$color-grey-3: #ddd;
+$color-grey-4: #928f8f;
+$color-grey-5: #f3f3f3;
+$color-grey-6: #e2e2e2;
+$color-grey-7: #d0d0d0;
+$color-grey-8: #f2f2f2;
+$color-grey-9: #b0b0b0;
+$color-red-1: #dc0303;
+$color-blue-1: #2196F3;
+$color-green-2: #4CAF50;
+$color-yellow-1: #ffe639;
+$color-red-2: #fa3c3c;
+$color-dark-4: #263545;
+$color-dark-5: #1f3954;
+$color-red-3: #F44336;
+$color-dark-6: #356399;
+$color-grey-10: #BFBFBF;
+$color-red-4: #f9c4c4;
+$color-dark-7: #444;
+
+
+// function rem to px
+@function rem($px) {
+  $rems: $px / $font-size-base;
+  @return #{$rems}rem;
+}
+
+// mixin add text-ellipsis
+@mixin text-ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

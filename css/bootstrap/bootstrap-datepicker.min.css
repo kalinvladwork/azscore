@@ -1,0 +1,96 @@
+.datepicker .datepicker-switch, .datepicker .next, .datepicker .prev, .datepicker table tr td.day:hover, .datepicker tfoot tr th {
+    cursor: pointer
+}
+
+.datepicker {
+    padding: 5px 0;
+    font-family: OpenSans-Semibold;
+    border-bottom: 1px solid #e0e0e0;
+    direction: ltr
+}
+
+.datepicker-inline {
+    width: 220px
+}
+
+.datepicker > div {
+    display: none
+}
+
+.datepicker table {
+    margin: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.datepicker td, .datepicker th {
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid transparent
+}
+
+.datepicker table tr td.new, .datepicker table tr td.old {
+    color: #999
+}
+
+.datepicker table tr td.today, .datepicker table tr td.today.active, .datepicker table tr td.today:active, .datepicker table tr td.today:hover, .datepicker table tr td.today:hover.active, .datepicker table tr td.today:hover:active, .datepicker table tr td.today:hover:hover {
+    background-color: #dce0e4;
+    color: #333
+}
+
+.datepicker table tr td.today.active, .datepicker table tr td.today:active, .datepicker table tr td.today:hover.active, .datepicker table tr td.today:hover:active, .datepicker table tr td.today:hover:hover {
+    background-color: #28b463;
+    color: #fff
+}
+
+.datepicker table tr td.today.active:hover {
+    color: #fff
+}
+
+.datepicker table tr td.active, .datepicker table tr td.active:hover {
+    background-color: #28b463;
+    color: #fff;
+    border-radius: 20px
+}
+
+.datepicker table tr td:hover {
+    color: #28b463
+}
+
+.datepicker table tr td span {
+    display: block;
+    width: 23%;
+    height: 54px;
+    line-height: 54px;
+    float: left;
+    margin: 1%;
+    cursor: pointer;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+
+.datepicker table tr td span.focused, .datepicker table tr td span:hover {
+    background: #DCE0E4;
+    color: #333
+}
+
+.datepicker table tr td span.new, .datepicker table tr td span.old {
+    color: #999
+}
+
+.datepicker .datepicker-switch {
+    width: 145px
+}
+
+.datepicker .datepicker-switch:hover, .datepicker .next:hover, .datepicker .prev:hover, .datepicker tfoot tr th:hover {
+    background: #eee
+}

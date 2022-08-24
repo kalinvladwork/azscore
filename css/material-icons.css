@@ -1,0 +1,232 @@
+.material-icons,
+i.icon {
+    font-style: normal;
+    font-weight: 400;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased
+}
+
+.head_search form,
+nav .brand-logo {
+    position: relative
+}
+
+.datepicker-links a:hover,
+.league_name a:hover,
+.match_day a:hover,
+.menu_head span a {
+    text-decoration: underline
+}
+
+.head_rgLinks,
+.head_search,
+.head_social,
+.leagues_wrap>ul,
+.standings_label,
+.standings_league,
+.standings_table,
+nav ul {
+    overflow: hidden
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(http://fonts.gstatic.com/s/materialicons/v19/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2')
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-size: 24px;
+    letter-spacing: normal;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga'
+}
+
+@font-face {
+    font-family: icon_font;
+    src: url(../fonts/icon_font/icon_font.eot?7hm4a0);
+    src: url(../fonts/icon_font/icon_font.eot?7hm4a0#iefix) format('embedded-opentype'), url(../fonts/icon_font/icon_font.ttf?7hm4a0) format('truetype'), url(../fonts/icon_font/icon_font.woff?7hm4a0) format('woff'), url(../fonts/icon_font/icon_font.svg?7hm4a0#icon_font) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+
+i.icon {
+    display: inline;
+    font-family: icon_font;
+    speak: none;
+    font-variant: normal;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.game_event>div:nth-child(2) a,
+.match_day,
+.news_blcTitle,
+.players_list h3 {
+    text-transform: uppercase
+}
+
+.icon-calendar:before {
+    content: "\e919"
+}
+
+.icon-email:before {
+    content: "\e900"
+}
+
+.icon-finished-scores:before {
+    content: "\e901"
+}
+
+.icon-football-card:before {
+    content: "\e902"
+}
+
+.icon-football-news:before {
+    content: "\e903"
+}
+
+.icon-football-tables:before {
+    content: "\e904"
+}
+
+.icon-give-us-feedbacks:before {
+    content: "\e905"
+}
+
+.icon-globe:before {
+    content: "\e906"
+}
+
+.icon-half-time:before {
+    content: "\e907"
+}
+
+.icon-home:before {
+    content: "\e908"
+}
+
+.icon-info:before {
+    content: "\e909"
+}
+
+.icon-leagues:before {
+    content: "\e90a"
+}
+
+.icon-live:before {
+    content: "\e90b"
+}
+
+.icon-live-scores:before {
+    content: "\e90c"
+}
+
+.icon-live-scores-calendar:before {
+    content: "\e90d"
+}
+
+.icon-my-games:before {
+    content: "\e90e"
+}
+
+.icon-not-started-scores:before {
+    content: "\e90f"
+}
+
+.icon-predictions:before {
+    content: "\e910"
+}
+
+.icon-scrollup-icon:before {
+    content: "\e911"
+}
+
+.icon-second-time:before {
+    content: "\e912"
+}
+
+.icon-soccer-database:before {
+    content: "\e913"
+}
+
+.icon-tables:before {
+    content: "\e914"
+}
+
+.icon-today:before {
+    content: "\e915"
+}
+
+.icon-today-scores:before {
+    content: "\e916"
+}
+
+.icon-tomorrow-scores:before {
+    content: "\e917"
+}
+
+.icon-yesterday-scores:before {
+    content: "\e918"
+}
+
+.icon-more_vert:before {
+    content: "\e5d4"
+}
+
+.icon-notifications:before {
+    content: "\e7f4"
+}
+
+.icon-search:before {
+    content: "\f002"
+}
+
+.icon-star:before {
+    content: "\f005"
+}
+
+.icon-config:before {
+    content: "\f013"
+}
+
+.icon-reload:before {
+    content: "\f01e"
+}
+
+.icon-twitter:before {
+    content: "\f099"
+}
+
+.icon-facebook:before {
+    content: "\f09a"
+}
+
+.icon-google-plus:before {
+    content: "\f0d5"
+}
+
+.icon-caret-down:before {
+    content: "\f0d7"
+}
+
+.icon-tablet:before {
+    content: "\f10a"
+}
+
+.icon-mobile:before {
+    content: "\f10b"
+}
+
+.icon-instagram:before {
+    content: "\f16d"
+}
+
+.icon-navicon:before {
+    content: "\f0c9"
+}
