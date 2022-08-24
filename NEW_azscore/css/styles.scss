@@ -1,0 +1,18 @@
+@import url(bootstrap/bootstrap.min.css);
+@import "variables";
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: $bodyBgColor;
+}
+
+
+.container {
+  max-width: $maxWidth;
+  background-color: red;
+}
+
